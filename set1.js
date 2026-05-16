@@ -51,3 +51,21 @@ function findIndexes(nums, target){
 };
 
 findIndexes([4, 2, 7, 2, 9, 2], 2)
+
+
+//5. Advanced — Two Sum
+// Write a function twoSum(nums, target) that returns the indexes of two numbers that add up to target. Assume there is exactly one valid answer.
+function twoSum(nums, target){
+    const idxArr = [];
+    for(let i = 0; i < nums.length - 1; i++){
+        for(let j = i+1; j < nums.length; j++){
+            if(nums[i] + nums[j] === target){
+                idxArr.push(i);
+                idxArr.push(j);
+            }
+        }
+    }
+    return(idxArr)
+};
+
+twoSum([2, 7, 11, 15], 9)
