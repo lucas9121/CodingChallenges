@@ -34,8 +34,20 @@ function greaterThan(arr, target){
     for(let num of arr){
         if(num > target) answerArr.push(num)
     }
-    console.log(answerArr)
     return answerArr
 };
 
-greaterThan([3, 8, 1, 10, 5], 5)
+greaterThan([3, 8, 1, 10, 5], 5);
+
+
+// 4. Intermediate — Find All Indexes
+// Write a function findIndexes(nums, target) that returns an array of all indexes where target appears.
+function findIndexes(nums, target){
+    const idxArr = [];
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] === target) idxArr.push(i)
+    };
+    return idxArr
+};
+
+findIndexes([4, 2, 7, 2, 9, 2], 2)
