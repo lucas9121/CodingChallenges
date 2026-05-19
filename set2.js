@@ -77,4 +77,4 @@ const twoSumOptimized = (nums, target) => {
 };
 
 
-console.log("Two sum optimized: ", twoSumOptimized([11, 7, 2, 15], 9))
+console.log("Two sum optimized: ", twoSumOptimized([11, 7, 2, 15], 9));
