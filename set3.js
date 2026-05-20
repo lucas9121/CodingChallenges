@@ -49,8 +49,8 @@ const firstNonRepeating = (str) => {
         charObj[char] = (charObj[char] || 0) + 1
     }
 
-    for(let key in charObj){
-        if(charObj[key] === 1) return key
+    for(let char of str){
+        if(charObj[char] === 1) return char
     }
     return null
 }
