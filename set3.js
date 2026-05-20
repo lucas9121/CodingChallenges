@@ -66,7 +66,7 @@ const isAnagram = (str1, str2) => {
 
     const strObj = {}
     for(let i = 0; i < str1.length; i++){
-        strObj[str1[i]] = (strObj[str1] || 0) + 1
+        strObj[str1[i]] = (strObj[str1[i]] || 0) + 1
     }
     for(let char of str2){
         strObj[char] = (strObj[char] || 0) + 1
