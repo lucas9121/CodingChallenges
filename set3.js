@@ -56,3 +56,26 @@ const firstNonRepeating = (str) => {
 }
 
 console.log("First non-repeating: ", firstNonRepeating("abbacdde"))
+
+
+// 5. Advanced — Valid Anagram
+// Write a function isAnagram(str1, str2) that returns true if the strings are anagrams of each other, otherwise false.
+
+const isAnagram = (str1, str2) => {
+    if(str1.length !== str2.length)  return false
+
+    const strObj = {}
+    for(let i = 0; i < str1.length; i++){
+        strObj[str1[i]] = (strObj[str1] || 0) + 1
+    }
+    for(let char of str2){
+        strObj[char] = (strObj[char] || 0) + 1
+    }
+
+    for(let key in strObj){
+        if(strObj[key] < 2) return false
+    }
+    return true
+}
+
+console.log("Valid anagram: ", isAnagram("listen", "silent"))
