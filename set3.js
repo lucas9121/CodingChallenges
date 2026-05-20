@@ -12,4 +12,12 @@ const countVowels = (str) => {
     return count
 }
 
-console.log("Count vowles: ", countVowels("javascript"))
+console.log("Count vowels: ", countVowels("javascript"))
+
+// 2. Beginner — Reverse String
+// Write a function reverseString(str) that returns the string reversed.
+function reverseString(str){
+    return str.split('').reverse().join('')
+}
+
+console.log("Reverse string: ", reverseString("hello"))
