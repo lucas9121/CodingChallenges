@@ -14,6 +14,7 @@ const countVowels = (str) => {
 
 console.log("Count vowels: ", countVowels("javascript"))
 
+
 // 2. Beginner — Reverse String
 // Write a function reverseString(str) that returns the string reversed.
 function reverseString(str){
@@ -21,3 +22,17 @@ function reverseString(str){
 }
 
 console.log("Reverse string: ", reverseString("hello"))
+
+// 3. Intermediate — Character Frequency
+// Write a function charFrequency(str) that returns an object containing the frequency of each character.
+
+const charFrequency = (str) => {
+    const freqObj = {}
+    for(let char of str){
+        freqObj[char] = (freqObj[char] || 0) + 1
+    }
+
+    return freqObj
+}
+
+console.log("Character frequency: ", charFrequency("banana"))
